@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>QuoteGen — Enquiry to Quotation</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+<header class="topbar">
+  <div class="brand"><button class="logo logo-button" id="logoButton" title="Change logo" aria-label="Change logo"><span id="brandLogoText">Q</span><img id="brandLogoImage" alt="Company logo"></button><input id="logoUpload" type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml" hidden></div>
+  <nav><button data-view="home">Home</button><button data-view="dashboard">Dashboard</button><button data-view="builder">Create Quote</button></nav>
+  <button class="avatar">VK</button>
+</header>
+<main>
+<section id="home" class="view active">
+  <div class="hero hero-premium">
+    <div class="hero-copy"><div class="eyebrow">AI-POWERED QUOTATION WORKFLOW</div><h1>Turn raw enquiries into<br><em>professional quotations.</em></h1><p>Paste a WhatsApp message, email or messy RFQ. QuoteGen structures the requirements and turns them into a polished, editable quotation.</p><div class="hero-actions"><button class="primary" data-view="builder">Create a quotation <span>→</span></button><button class="ghost" data-view="dashboard">View dashboard</button></div><div class="trust"><span>✦ Built for B2B teams</span><span>⚡ Seconds, not hours</span><span>✓ Editable before sending</span></div></div>
+    <div class="hero-card"><div class="window"><div class="window-head"><span></span><span></span><span></span><b>Raw enquiry → Quote</b></div><div class="raw">Need 25 SS ball valves, 2 inch, 304 grade. Delivery Ahmedabad. Please share your best price. Payment 50% advance.</div><div class="arrow">↓</div><div class="parsed"><div><small>CUSTOMER</small><strong>ABC Industries</strong></div><div><small>ITEM</small><strong>SS Ball Valve · 2" · SS304</strong></div><div><small>QTY</small><strong>25 units</strong></div><div><small>DELIVERY</small><strong>Ahmedabad</strong></div></div></div></div>
+  </div>
+<section class="home-sections">
+    <div class="home-proof"><span>BUILT FOR</span><b>Manufacturers</b><b>Distributors</b><b>Traders</b><b>Service businesses</b><b>Procurement teams</b></div>
+    <div class="feature-grid">
+      <article><span class="feature-icon">01</span><h3>Paste anything</h3><p>WhatsApp messages, emails, RFQs and messy customer notes — no formatting required.</p></article>
+      <article><span class="feature-icon">02</span><h3>Structure automatically</h3><p>Products, quantities, specifications, optional items, services and commercial terms become organized line items.</p></article>
+      <article><span class="feature-icon">03</span><h3>Edit the final quote</h3><p>Review and change the actual quotation before sending. No back-and-forth form filling.</p></article>
+      <article><span class="feature-icon">04</span><h3>Send a polished document</h3><p>Clean, client-ready quotation output with totals, GST, terms and your branding.</p></article>
+    </div>
+    <div class="workflow">
+      <div><div class="eyebrow">HOW IT WORKS</div><h2>From messy message to<br><em>ready-to-send quote.</em></h2></div>
+      <div class="workflow-steps"><div><b>01</b><span>Paste enquiry</span><small>Any format</small></div><div><b>02</b><span>Review structure</span><small>Items + terms</small></div><div><b>03</b><span>Edit & price</span><small>Directly on quote</small></div><div><b>04</b><span>Download</span><small>Quotation only</small></div></div>
+    </div>
+    <div class="home-cta"><div><div class="eyebrow">READY WHEN YOU ARE</div><h2>Stop formatting enquiries.<br><em>Start sending quotes.</em></h2></div><button class="primary" data-view="builder">Create your first quotation →</button></div>
+  </section>
+</section>
+<section id="dashboard" class="view">
+  <div class="page-head"><div><div class="eyebrow">WORKSPACE</div><h2>Good evening, Varun.</h2><p>Turn your next enquiry into a quote.</p></div><button class="primary" data-view="builder">+ New quotation</button></div>
+  <div class="stats"><div><span>Total quotations</span><b>128</b><small>↑ 18% this month</small></div><div><span>Drafts</span><b>12</b><small>Need attention</small></div><div><span>Sent this month</span><b>46</b><small>↑ 12% vs last month</small></div><div><span>Conversion</span><b>31%</b><small>Healthy</small></div></div>
+  <div class="dashboard-tools">
+    <div class="brand-settings panel"><div><div class="eyebrow">BRAND PROFILE</div><h3>Make every quotation yours.</h3><p>Upload your logo once. It appears on the quotation header and PDF.</p></div><button class="ghost" id="dashboardLogo">Upload logo</button></div>
+    <div class="dashboard-shortcuts panel"><div><div class="eyebrow">QUICK START</div><h3>Common actions</h3></div><div><button class="ghost" data-view="builder">New quotation</button><button class="ghost" id="dashboardSample">Try sample enquiry</button></div></div>
+  </div>
+  <div class="panel"><div class="panel-head"><h3>Recent quotations</h3><button class="ghost small">View all</button></div><table><thead><tr><th>Quotation</th><th>Customer</th><th>Amount</th><th>Status</th><th></th></tr></thead><tbody id="recentBody"><tr><td><b>QTN-2026-0128</b><small>05 Oct 2026</small></td><td>ABC Industries</td><td>₹36,875</td><td><span class="pill sent">Sent</span></td><td>•••</td></tr><tr><td><b>QTN-2026-0127</b><small>05 Oct 2026</small></td><td>Darshil Trading</td><td>₹82,400</td><td><span class="pill draft">Draft</span></td><td>•••</td></tr><tr><td><b>QTN-2026-0126</b><small>04 Oct 2026</small></td><td>Metro Engineering</td><td>₹1,24,780</td><td><span class="pill accepted">Accepted</span></td><td>•••</td></tr></tbody></table></div>
+</section>
+<section id="builder" class="view">
+  <div class="builder-head"><div><div class="eyebrow">NEW QUOTATION</div><h2>From enquiry to quote.</h2><p>Generate once. Then edit the final quotation directly.</p></div><div class="stepper"><span class="on">1</span><i></i><span class="on">2</span><i></i><span>3</span></div></div>
+  <div class="builder-grid">
+    <div class="left">
+      <div class="panel enquiry-panel"><div class="panel-head"><div><h3>Paste raw enquiry</h3><small>WhatsApp, email, RFQ or plain text</small></div><button class="ghost small" id="sample">Use sample</button></div><textarea id="enquiry"></textarea><button class="primary full" id="parse">✨ Generate quotation</button></div>
+      <div class="panel extraction-panel"><div class="panel-head"><div><h3>AI extraction</h3><small id="itemSummary">Generate a quotation to structure the enquiry.</small></div><span class="ai-badge">Structured</span></div><div class="insight-list"><div><span>Items</span><b id="insightItems">—</b></div><div><span>Optional</span><b id="insightOptional">—</b></div><div><span>Services</span><b id="insightServices">—</b></div><div><span>Commercial</span><b id="insightCommercial">—</b></div></div><p class="helper">Everything shown on the right is editable. Changes update totals instantly.</p></div>
+      <div class="panel quick-panel"><div class="panel-head"><div><h3>Quick actions</h3><small>Use the quotation itself for edits.</small></div></div><div class="quick-actions"><button class="ghost" id="addItem">+ Add item</button><button class="ghost" id="addOptional">+ Add optional</button><button class="ghost" id="addService">+ Add service</button></div></div>
+    </div>
+    <div class="right">
+      <div class="preview-wrap">
+        <div class="preview-toolbar"><div><span>Live quotation</span><small>Click any field to edit</small></div><div class="toolbar-actions"><button class="ghost small" id="download">↓ Download PDF</button><button class="primary small" id="save">Save</button></div></div>
+        <div class="paper" id="paper">
+          <div class="quote-top">
+            <div><div class="qmark"><span class="qmark-fallback">Q</span><img class="qmark-logo" alt="Company logo"></div><div class="editable title-edit" contenteditable="true" data-bind="quoteTitle">QUOTATION</div><p><span class="editable" contenteditable="true" data-bind="quoteNo">QTN-2026-0129</span> · <span id="pDate">05 OCT 2026</span></p></div>
+            <div class="company"><b class="editable" contenteditable="true" data-bind="companyName">YOUR COMPANY</b><span class="editable" contenteditable="true" data-bind="companyAddress">Ahmedabad, Gujarat</span><span class="editable" contenteditable="true" data-bind="companyEmail">hello@company.com</span></div>
+          </div>
+          <hr>
+          <div class="bill">
+            <div><small>QUOTED TO</small><b class="editable" contenteditable="true" data-bind="customer">Customer</b><span class="editable" contenteditable="true" data-bind="delivery">To be confirmed</span><span class="editable" contenteditable="true" data-bind="payment">To be confirmed</span></div>
+            <div class="validity-block"><small>VALID UNTIL</small><b class="editable" contenteditable="true" data-bind="validUntil">04 Nov 2026</b></div>
+          </div>
+          <table class="quote-table"><thead><tr><th>DESCRIPTION</th><th>QTY</th><th>UNIT PRICE</th><th>AMOUNT</th><th class="action-col"></th></tr></thead><tbody id="quoteBody"></tbody></table>
+          <div id="mobileQuoteItems" class="mobile-quote-items"></div><div class="paper-actions"><button class="ghost tiny" id="paperAddItem">+ Add item</button><button class="ghost tiny" id="paperAddOptional">+ Optional</button><button class="ghost tiny" id="paperAddService">+ Service</button></div>
+          <div class="totals">
+            <div><span>Main required items</span><b id="pMainSubtotal">To be quoted</b></div>
+            <div><span>Optional items</span><b id="pOptionalSubtotal">To be quoted</b></div>
+            <div><span>Installation + transportation + services</span><b id="pServiceSubtotal">To be quoted</b></div>
+            <div><span>Subtotal</span><b id="pSubtotal">To be quoted</b></div>
+            <div class="gst-line"><span>GST <input id="gstInline" class="inline-number" value="" inputmode="decimal" placeholder="%"> </span><b id="pGst">—</b></div>
+            <div class="grand"><span>Grand total</span><b id="pTotal">To be quoted</b></div>
+          </div>
+          <div class="terms-preview"><div class="terms-head"><b>TERMS & CONDITIONS</b><button class="ghost tiny" id="editTerms">Edit</button></div><div id="pTerms" class="editable terms-edit" contenteditable="true">Prices are exclusive of GST unless stated otherwise. Delivery and payment terms are as agreed. Warranty, delivery time, quotation validity and other commercial terms are subject to confirmation.</div></div>
+          <div class="sign"><span class="editable" contenteditable="true" data-bind="footerNote">Thank you for your business.</span><b class="editable" contenteditable="true" data-bind="signatory">Authorised Signatory</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="mobileEdit" class="mobile-sheet" aria-hidden="true"><div class="mobile-sheet-backdrop" data-close-mobile></div><div class="mobile-sheet-card"><div class="mobile-sheet-handle"></div><div class="mobile-sheet-head"><div><small>EDIT LINE ITEM</small><h3 id="mobileEditTitle">Item</h3></div><button class="sheet-close" data-close-mobile>×</button></div><div class="mobile-form"><label>Product / service<input id="mProduct"></label><label>Specifications<textarea id="mSpec" rows="3"></textarea></label><div class="m-grid"><label>Quantity<input id="mQty" inputmode="decimal" type="number"></label><label>UOM<input id="mUnit"></label></div><label>Unit price<input id="mPrice" inputmode="decimal" type="number" placeholder="Leave blank if to be quoted"></label></div><div class="mobile-sheet-actions"><button class="danger" id="mRemove">Remove item</button><button class="primary" id="mDone">Done</button></div></div></div>
+<div id="mobileNav" class="mobile-nav"><button data-view="home"><span>⌂</span><small>Home</small></button><button data-view="dashboard"><span>▦</span><small>Dashboard</small></button><button class="mobile-create" data-view="builder"><b>+</b><small>New quote</small></button><button data-view="builder"><span>✎</span><small>Create</small></button></div>
+</main><div id="toast"></div></div><script src="app.js"></script>
+</body></html>
